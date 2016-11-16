@@ -83,7 +83,7 @@ public class MainActivityTest {
                 MockModelFabric.makeListOfMockCharacters(characterIds.length);
         stubMockCharacters(Observable.just(mockCharacters));
         main.launchActivity(null);
-        onView(withText(mockCharacters.get(0).ndsaame))
+        onView(withText(mockCharacters.get(0).name))
                 .perform(click());
         onView(withText(com.hitherejoe.androidboilerplate.R.string.text_lorem_ipsum))
                 .check(matches(isDisplayed()));
